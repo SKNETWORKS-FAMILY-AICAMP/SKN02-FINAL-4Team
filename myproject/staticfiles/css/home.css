@@ -1,0 +1,71 @@
+.main-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.container {
+   
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 50px;
+    
+    
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 5px;
+    justify-items: center; /* Center cards inside the grid */
+    width: 80%; /* Full width initially */
+    transition: width 0.3s ease; /* Smooth transition */
+    margin: 0;
+    
+}
+
+.cards.active {
+    flex:5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    justify-items: center;
+    gap: 5px !important; /* !important로 강제 적용 */
+    margin-right: 40% !important;
+}
+
+.card {
+    background-color: rgb(26, 21, 21);
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* 카드 너비를 부모 그리드에 맞춤 */
+    max-width: 250px; /* 최대 너비를 설정해 과도하게 커지지 않도록 */
+    height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 200px !important;
+    height: 150px !important;
+    border-radius: 8px;
+}
+
+.card .card-title {
+    font-size: 18px; /* 원하는 글씨 크기 */
+    font-weight: bold;
+    color: #f5f0f0 ;
+}
+
+
+.card p {
+    font-size: 16px  !important;
+    color: #ffffff ;
+}

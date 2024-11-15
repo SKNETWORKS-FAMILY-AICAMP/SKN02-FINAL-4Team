@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 프로필 섹션 레이아웃 */
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* 프로필 정보 (이미지, 이름, 아이콘) */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 프로필 이미지 아래에 이름이 정렬되도록 설정 */
+    gap: 25px; /* 이미지와 이름 사이 간격 조정 */
+    font-size: 50px;
+    
+}
+
+.profile-image {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 50% !important;
+    margin-right: -20% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.profile-image img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+.change-button {
+    padding: 10px 20px;
+    background-color: #ffebcd !important; /* 밝은 크림색 배경 */
+    color: #333; /* 텍스트 색상 */
+    border: 2px solid #f5c6aa; /* 부드러운 테두리 색상 */
+    border-radius: 20px; /* 둥근 모서리 */
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* 살짝 부드러운 그림자 */
+    transition: all 0.3s ease; /* 애니메이션 효과 */
+}
+
+.change-button:hover {
+    background-color: #ffe4b5; /* 호버 시 더 밝은 색상 */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 확대 */
+    transform: scale(1.05); /* 호버 시 살짝 확대 */
+}
+
+.change-button:active {
+    background-color: #f5c6aa; /* 클릭 시 색상 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 클릭 시 그림자 감소 */
+    transform: scale(0.95); /* 클릭 시 약간 축소 */
+}
+
+
+/* 프로필 이름과 수정 아이콘 */
+.profile-name-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #181717;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-right: -25%;
+    width: 200px;
+}
+
+.profile-name {
+    font-size: 50px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin-right: 10%;
+    
+}
+
+.edit-icon {
+    font-size: 18px;
+    color: #888;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 50%;
+    
+}
+
+.edit-icon:hover {
+    color: #555;
+}
+
+/* 아바타 선택 섹션 */
+.avatar-grid {
+    display: flex;
+    align-items: center;
+    border: 2px solid #000;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    height: 800px;
+    flex-grow: 1;
+    margin-right: 23%;
+}
+
+.avatar-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+    padding: 8%;
+    margin-left: -4%;
+}
+
+.avatar-option img {
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin-left: 25%;
+}
+
+.delete-account-btn {
+    display: inline-block;
+    background-color: #e74c3c; /* 붉은색 배경 */
+    color: #ffffff; /* 흰색 텍스트 */
+    padding: 10px 20px; /* 버튼 안의 패딩 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    cursor: pointer; /* 커서 변경 */
+    font-size: 14px; /* 글꼴 크기 */
+    font-weight: bold; /* 글꼴 두껍게 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    transition: background-color 0.3s; /* 호버 시 부드러운 색상 전환 */
+    position: fixed; /* 버튼을 화면에 고정 */
+    bottom: 20px; /* 화면 아래에서의 거리 */
+    right: 20px; /* 오른쪽에서의 거리 */
+    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+}
+.delete-account-btn:hover {
+    background-color: #c0392b; /* 호버 시 어두운 붉은색 */
+}
+
+.delete-account-btn:active {
+    background-color: #a93226; /* 클릭 시 더 어두운 색상 */
+    transform: scale(0.98); /* 클릭 시 약간 축소 */
+}
+
+.delete-account-btn:focus {
+    outline: none; /* 포커스 시 외곽선 제거 */
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.7); /* 포커스 시 그림자 효과 */
+}

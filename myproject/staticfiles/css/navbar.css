@@ -1,0 +1,103 @@
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151515;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar-brand {
+    font-size: 48px;
+    font-weight: bold;
+    color: #b8b6b6 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffffff !important;
+}
+
+
+header nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #e5e5e5;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-section .profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #b8b6b6;
+    margin-right: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-section .profile-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 프로필 텍스트 스타일 */
+.profile-section span {
+    font-size: 20px;
+    color: #e5e5e5;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.profile-section span:hover {
+    color: #ffffff;
+}
+
+/* 네비게이션 메뉴 중앙 정렬 */
+.navbar-nav.mx-auto {
+    text-align: center;
+}
+
+/* 메뉴 항목 스타일 */
+.navbar-nav .nav-link {
+    color: #d4d4d4 !important;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 모바일 토글 버튼 스타일 */
+.navbar-toggler-icon {
+    filter: invert(1);
+    transition: transform 0.s ease;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    transform: rotate(180deg);
+}

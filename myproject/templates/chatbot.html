@@ -1,0 +1,47 @@
+{% load static %}
+
+<div id="chatSection" class="chat-container">
+    <!-- 닫기 버튼 -->
+    <button class="close-btn" onclick="closeChat()">
+        <img src="{% static 'images/x_icon.PNG' %}" alt="Close" width="24" height="24">
+    </button>
+
+    <div class="flex-container">
+        
+        {% if request.user.is_authenticated %}
+        <div class="chat-list">
+            <h3>Chat History</h3>
+            {% include 'chat_list.html' %}
+        </div>
+        {% endif %}
+
+        <div class="chat-messages">
+            <div id="chat-detail-container"></div>
+            
+            <div class="message-section" id="chat-output">
+                <div class="message-row">
+                    <div class="message bot-message">안녕하세요! 무엇을 도와드릴까요?</div>
+                </div>
+                
+            </div>
+
+            <!-- 입력 영역 -->
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type message here...">
+                <button class="send-button" onclick="sendMessage()">Send</button>
+                <button class="recommand-btn" onclick="recommendAgain()"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 채팅 활성화 버블 -->
+<div id="chatBubble" class="chat-bubble" onclick="activateChatbot()">
+    <span>이거어때?</span>
+</div>
+
+<!-- isAuthenticated 변수를 설정하고 chat.js를 포함합니다 -->
+<script>
+    var isAuthenticated = "{% if request.user.is_authenticated %}True{% else %}False{% endif %}";
+</script>
+<script src="{% static 'js/chat.js' %}"></script>

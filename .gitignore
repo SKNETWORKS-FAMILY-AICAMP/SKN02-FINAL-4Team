@@ -1,0 +1,41 @@
+# Python
+*.pyc
+__pycache__/
+
+# Environment variables
+.env
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# macOS
+.DS_Store
+
+# Certificates
+ssl/
+
+# Model files
+*.pth
+*.pt
+*.json.gz
+*.bin
+*.model
+
+# Data files
+*.json
+*.txt
+*/data/*
+
+# Other cache and temporary files
+.DS_Store
+__pycache__/
+*.out
+*.pyc
+
+# Additional items
+ngrok.log

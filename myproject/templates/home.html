@@ -1,0 +1,27 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container">
+    <div class="main-content">
+        <!-- Product cards section with images and titles from the database -->
+        <section id="productSection" class="cards">
+            {% for item in main_images|slice:":4" %}
+            <div class="card">
+                {% if item.images %}
+                    <img src="{{ item.images }}" alt="{{ item.title }}" style="width: 250px; height: auto;">
+                {% else %}
+                    <p>No image available</p>
+                {% endif %}
+                <span class="card-title">{{ item.summarized_title }}</span> <!-- Display title as the label -->
+            </div>
+            {% endfor %}
+        </section>
+
+        <!-- Include Chatbot Section -->
+        {% include 'chatbot.html' with chats=chats %}
+    </div>
+</main>
+
+{% endblock %}

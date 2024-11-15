@@ -1,0 +1,20 @@
+{% load static %}
+
+
+<ul class="chat-history">
+    {% if chats %}
+        {% for chat in chats %}
+            <li>
+                <a href="javascript:void(0);" onclick="loadChatDetail('{{ chat.chat_id }}')">
+                    {{ chat.chat_last_timestamp }}
+                </a>
+                <button onclick="deleteChat('{{ chat.chat_id }}')" class="delete-button">Delete</button>
+            </li>
+        {% endfor %}
+    {% else %}
+        <li>No Chat History.</li>
+    {% endif %}
+</ul>
+    <!-- 새로운 채팅 시작 버튼 -->
+<button class="newchat-butten" onclick="newChat()">New Chat</button>
+

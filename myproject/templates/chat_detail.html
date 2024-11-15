@@ -1,0 +1,20 @@
+{% load static %}
+
+<div class="chat-his">
+    <h3>Chat on {{ chat.chat_last_timestamp }}</h3>
+    <div class="chat-history">
+        {% for question, answer in conversation %}
+            <div class="message-row">
+                <div class="user-message">
+                    <strong></strong>{{ question.question_content }}
+                </div>
+            </div>
+            <div class="message-row">
+                <div class="bot-message">
+                    <strong></strong>{{ answer.answer_content }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="javascript:void(0);" onclick="showChatList()" class="back-link">Back to Chat</a>
+</div>

@@ -1,0 +1,28 @@
+/* 기본 페이지와 HTML, body 설정 */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .container가 화면의 남은 공간을 차지하도록 설정 */
+.container {
+    flex: 1 0 auto; /* 화면의 남은 공간을 차지하도록 설정 */
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    background-color: rgb(251, 251, 252) !important;
+}
+
+/* footer는 하단에 고정 */
+footer {
+    background-color: #b9b4b4 !important;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    flex-shrink: 0; /* footer가 항상 하단에 위치하도록 설정 */
+}

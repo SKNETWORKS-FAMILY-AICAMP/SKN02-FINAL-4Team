@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="profile-section">
+        <!-- Profile Image and Name -->
+        <div class="profile-info">
+            <div class="profile-image">
+                <img id="mainProfileImage" src="{% static 'images/default_profile.jpg' %}" alt="Profile Image">
+            </div>
+            <div class="profile-name-container">
+                <span class="profile-name" id="profileName">{{ username }}</span>
+                <button class="edit-icon" onclick="enableEditing()">✏️</button>
+            </div>
+            <!-- Delete Account Button -->
+            <form action="{% url 'common:delete_account' %}" method="post" style="margin-top: 15px;">
+                {% csrf_token %}
+                <button type="submit" class="delete-account-btn">Delete Account</button>
+            </form>
+        </div>
+        
+
+        <!-- Avatar Selection Box -->
+        <div class="avatar-grid">
+            <div class="avatar-container">
+                <div class="avatar-option">
+                    <img src="{% static 'images/profile_potato.PNG' %}" alt="Potato" onclick="selectAvatar(2)">
+                </div>
+                <div class="avatar-option">
+                    <img src="{% static 'images/profile_sweetpotato.PNG' %}" alt="Sweet Potato" onclick="selectAvatar(3)">
+                </div>
+                <div class="avatar-option">
+                    <img src="{% static 'images/profile_broccoli.PNG' %}" alt="Broccoli" onclick="selectAvatar(4)">
+                </div>
+                <div class="avatar-option">
+                    <img src="{% static 'images/profile_corn.PNG' %}" alt="Corn" onclick="selectAvatar(5)">
+                </div>
+                <button onclick="saveAvatar()" class="change-button">Change Profile Picture</button>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+<script src="{% static 'js/profile.js' %}"></script>
+{% endblock %}

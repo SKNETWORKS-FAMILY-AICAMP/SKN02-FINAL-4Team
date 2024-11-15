@@ -1,0 +1,26 @@
+# models
+*.pth
+*.pt
+*.json.gz
+*.jsonl.gz
+*.bin
+*.model
+*.pickle
+*.sqlite3
+
+# data
+*.json
+*.txt
+*.jsonl
+*.gz
+*/data/*
+
+# etc, cache
+.DS_Store
+__pycache__/
+*.out
+*.pyc
+
+# 새로운 항목
+.env
+ngrok.log
